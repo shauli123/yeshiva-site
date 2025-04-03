@@ -12,8 +12,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-const pages = ['חדשות', 'פעיליות', 'גלריה'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import MenuDrop from './MenuDrop';
+const pages = ["חזון הישיבה"];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar({Logo}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -129,6 +130,7 @@ function Navbar({Logo}) {
                 {page}
               </Button>
             ))}
+            <MenuDrop text = {"מידע להורים"} items = {{"אתר יפה": "https://google.com", "זהירות": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}}></MenuDrop>
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             {/* <Tooltip title="Open settings">
